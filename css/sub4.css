@@ -1,0 +1,478 @@
+#content{
+   padding-bottom: 250px;
+}
+
+#content h2{
+   position: relative;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+   top: -510px;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-size: 3.5rem;
+   letter-spacing: .2rem;
+   /* transform: translateX(-50%); */
+   color: #fff;
+}
+
+#content h2::before{
+   content: '';
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   width: 65px;
+   height: 65px;
+   margin-left: 280px;
+   background: url(../images/h3_before.png) no-repeat;
+   background-size: cover;
+}
+
+#content h3{
+   font-size: 2.8rem;
+   color: #fff;
+   text-align: center;
+   padding: 20px 0 0 0;
+}
+
+#content h4{
+   font-size: 1.4rem;
+   color: #333;
+   font-weight: 400;
+   padding: 0 0 10px 0;
+   /* text-align: center; */
+}
+
+#content h5{
+   font-size: 1.5rem;
+   color: #333;
+   /* padding: 20px 0 60px 0; */
+   position: relative;
+}
+
+#content h5::before {
+   content: "";
+   width: 95%;
+   position: absolute;
+   bottom: -10px; /* 글씨와 밑줄 사이의 거리 */
+   left: 0;
+   border: 1px solid #616161;
+}
+
+#content p{
+   font-size: 1.1rem;
+   color: #333;
+   text-align: justify;
+   word-break: break-all;
+   font-weight: 400;
+   line-height: 1.5rem;
+}
+
+#content p:nth-of-type(1){
+   margin-top: 35px;
+}
+
+/* 본문영역 */
+
+/* 음악플레이 */
+@keyframes rotation {
+   100% {transform: rotate(360deg);}
+}
+
+#content section{
+   margin-bottom: 200px;
+}
+
+#content .menu_4 .playerWrap{
+   margin-top: 50px;
+   padding: 50px;
+   display: grid;
+   grid-template-columns: 45% 45%;
+   grid-template-rows: auto;
+   grid-column-gap: 5%;
+}
+#content .menu_4 .playerWrap .left_box{
+   position: relative;}
+
+#content .menu_4 .playerWrap .playerImg{
+   position: relative;
+   margin: 80px 0 0 120px;
+   left:-50px; top:0;
+}
+
+#content .menu_4 .playerWrap .playerImg img {
+   border-radius: 50%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: all .2s;
+}
+
+#content .menu_4 .playerWrap .playerImg::before{
+   content: '';
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   border: 1px solid #ccc;
+   padding: 10px;
+}
+
+#content .menu_4 .playerWrap .playerImg::after{
+   backdrop-filter: blur(10px);
+   content: '';
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   border: 2px solid #fff;
+   background: rgba(255,255,255,.3);
+   padding: 100px;
+   z-index: -1;
+}
+
+#content .menu_4 .playerWrap .playerImg img.current{
+   animation: rotation 6s linear infinite ;
+}
+
+#content .menu_4 .playerWrap .playInfo li{
+   width: 130px;
+   height: 130px;
+   border-radius: 50%;
+   overflow: hidden;
+   position: absolute;
+   right:0;
+   top:0;
+}
+
+#content .menu_4 .playerWrap .playInfo li:nth-child(1){
+   right: -8%;
+   top:15%;
+}
+#content .menu_4 .playerWrap .playInfo li:nth-child(2){
+   right: -15%; top:45%;}
+#content .menu_4 .playerWrap .playInfo li:nth-child(3){right: -8%;
+   top:75%;
+}
+#content .menu_4 .playerWrap .playInfo li img{
+   width: 100%;
+}
+
+#content .menu_4 .playerWrap .playInfo li a{
+   filter: grayscale(100%);
+}
+#content .menu_4 .playerWrap .playInfo li a.curr{
+   filter: grayscale(0);
+}
+
+
+#content .menu_4 .playerWrap .info{
+   margin-left: 100px;
+   margin-bottom: 30px;
+   /* border: 1px solid red; */
+}
+
+#content .menu_4 .playerWrap .info dl{
+   color: #fff;
+   margin-top: 45%;
+   text-align: center;
+}
+
+#content .menu_4 .playerWrap .info dt{
+   margin-bottom: 15px;
+   font-size: 1.8em;
+   text-align: center;
+   font-weight: 500;
+}
+
+#content .menu_4 .playerWrap .info dd{
+   margin-bottom: 80px;
+}
+
+#content .menu_4 .playerWrap .info .audio_control .playerControler{
+   border: 1px solid #fff;
+   border-radius: 30px;
+   width: fit-content;
+   margin: 0 auto;
+   display: flex;
+   flex-basis: 0;
+   /* background: #a1a2d6; */
+   /* width: 300px; */
+   /* margin: 0 auto; */
+   height: 50px;
+   padding: 5px 50px;
+}
+
+#content .menu_4 .playerWrap .info .audio_control .playerControler i{
+   font-size: 1.3em;
+   color: #fff;
+   background:none;
+   cursor: pointer;
+   float: left;
+   display: block;
+   padding:15px;
+}
+
+/* 유튜브 */
+#content .youtube .clip{
+   margin-top: 50px;
+   overflow: hidden;
+}
+
+#content .youtube .clip .clip_part {
+   width:50%;
+   float: left;
+   margin-bottom: 100px;
+}
+
+
+#content .youtube .clip .clip_part .subTitle {
+   position: relative;
+   padding-top: 10px;
+   font-size: 1.4em;
+   text-align: center;
+   color: #fff
+}
+
+/* .subTitle:after {
+   content: '';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   width: 100px;
+   height: 4px;
+   margin-left: -50px;
+   background: yellow
+} */
+
+#content .youtube .clip .clip_part .contentArea {
+   position: relative;
+   width: 96%;
+   margin: 30px auto;
+}
+
+#content .youtube .clip .clip_part .contentArea .imgPart {
+   position: relative;
+   cursor: pointer;
+   margin-bottom: 30px;
+}
+
+#content .youtube .clip .clip_part .contentArea .imgPart .popup-youtube>img {
+   width: 100%;
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
+#content .youtube .clip .clip_part .contentArea p {
+   color: #fff;
+   text-align: justify;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+#content .youtube .clip .clip_part .playBnt {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 110px;
+   height: 110px;
+   margin: -55px 0 0 -55px;
+   border-radius: 94px;
+   background: rgba(0,0,0,.6);
+}
+
+#content .youtube .clip .clip_part .imgPart:hover .playBnt {
+   background: rgba(255,0,0,.6);
+}
+
+#content .youtube .clip .clip_part .playBnt img {
+   position: relative;
+   width: auto;
+   top: 50%;
+   left: 50%;
+   margin: -32px 0 0 -20px;
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+   #content {
+      padding-bottom: 500px;
+      & .menu_4 {
+         & .playerWrap{
+            & .playInfo{
+               & li {
+                  width: 100px;
+                  height: 100px;
+               }
+               & li:nth-child(1){
+                     right: -12%;
+                     top: 15%;
+                  }
+               & li:nth-child(2){
+                     right: -21%;
+                     top: 45%;
+                  }
+               & li:nth-child(3){
+                     right: -12%;
+                     top: 75%;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+   #content {
+      & h3{
+         font-size: 2rem;
+      }
+      & .menu_4 {
+         margin-bottom: 100px;
+         & .playerWrap {
+            grid-template-columns: 1fr;
+            & .playerImg {
+               margin: 80px 0 0 0;
+               left: 10%;
+               top: 0;
+               width: 75%;
+            }
+            & .playInfo{
+               & li:nth-child(1){
+                  right: 6%;
+                  top:15%;
+               }
+               & li:nth-child(2){
+                  right: -1%;
+                  top:45%;
+               }
+               & li:nth-child(3){
+                  right: 3%;
+                  top:75%;
+               }
+            }
+            & .info{
+               margin: 190px 0 0 0;
+               & dl {
+                  margin-top: 20px;
+               }
+            }
+         }
+      } 
+   }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px){
+   #content{
+      padding-bottom: 190px;
+      & .menu_4 {
+         & .playerWrap{
+            padding: 0;
+            & .playInfo {
+               display: flex;
+               justify-content: center;
+               gap: 60px;
+               margin-top: 130px;
+               & li{
+                  position: static;
+               }
+            }
+            & .left_box{
+               margin: 95px auto;
+            }
+            & .playerImg {
+               margin: 0 5%;
+            }
+            & dl{
+               margin-top: 50px;
+            }
+            & dd{
+               margin-bottom: 40px;
+            }
+         }
+      }
+   }
+   #content{
+      & .youtube {
+         & .clip {
+            & .clip_part {
+               width:auto;
+               float:none;
+            }
+         }
+      } 
+   }
+   
+}
+
+/* 모바일 */
+@media screen and (max-width:640px){
+   #content{
+      & .youtube{
+         & .clip{
+            & .clip_part {
+               & .subTitle {
+                  font-size: 1.3rem;
+               }
+               & .contentArea{
+                  & p{
+                     display: none;
+                  }
+                  & .imgPart{
+                     & .popup-youtube{
+                        & .playBnt {
+                           width: 85px;
+                           height: 85px;
+                           margin: -48px 0 0 -48px;
+                           & img{
+                              margin: -30px -25px;
+                              transform: scale(.5);
+                           }
+                        }
+                     }
+                  }
+               }
+               
+            }
+         }
+      } 
+   }
+   
+}
+
+
+/* 모바일2 */
+@media screen and (max-width:420px) {
+   #content{
+      & .youtube{
+         & .clip{
+            & .clip_part {
+               & .contentArea{
+                  width: auto;
+                  & .imgPart{
+                     & .popup-youtube{
+                        & .playBnt {
+                           width: 65px;
+                           height: 65px;
+                           margin: -48px 0 0 -48px;
+                           & img{
+                              transform: scale(.5);
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      } 
+   }
+}

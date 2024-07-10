@@ -1,0 +1,274 @@
+#content{
+   padding-bottom: 500px;
+}
+
+
+
+#content h2{
+   position: relative;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+   top: -510px;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-size: 3.5rem;
+   letter-spacing: .2rem;
+   /* transform: translateX(-50%); */
+   color: #fff;
+}
+
+#content h2::before{
+   content: '';
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   width: 65px;
+   height: 65px;
+   margin-left: 280px;
+   background: url(../images/h3_before.png) no-repeat;
+   background-size: cover;
+}
+
+#content h3{
+   position: relative;
+   font-size: 2.8rem;
+   color: #fff;
+   text-align: center;
+   padding: 20px 0 0 0;
+}
+
+#content h3::after{
+   content: '';
+   position: absolute;
+   bottom: -50%;
+   left: 50%;
+   transform: translateX(-50%);
+   /* left: calc(50% - 50px); */
+   width: 100px;
+   height: 7px;
+   background: url(../images/h_wave-01.png) no-repeat;
+   background-size: cover;
+}
+
+#content h4{
+   font-size: 1.4rem;
+   color: #333;
+   font-weight: 400;
+   padding: 0 0 10px 0;
+   /* text-align: center; */
+}
+
+#content h5{
+   font-size: 1.5rem;
+   color: #333;
+   /* padding: 20px 0 60px 0; */
+   position: relative;
+}
+
+#content h5::before {
+   content: "";
+   width: 95%;
+   position: absolute;
+   bottom: -10px; /* 글씨와 밑줄 사이의 거리 */
+   left: 0;
+   border: 1px solid #616161;
+}
+
+#content p{
+   font-size: 1.1rem;
+   color: #333;
+   text-align: justify;
+   word-break: break-all;
+   font-weight: 400;
+   line-height: 1.5rem;
+}
+
+#content p:nth-of-type(1){
+   margin-top: 35px;
+}
+
+/* 본문영역 */
+
+#content .sub3_marinelife{
+   margin-top: 150px;
+}
+
+#content .sub3_marinelife .card{
+   display: flex;
+   align-items: center;
+   width: 75vw;
+   /* min-width: 650px; */
+   padding: 60px 60px 60px 30px;
+   background: #ffffff;
+   /* border: 1px solid red; */
+   border-radius: 24px;
+   margin: 80px auto;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* #content .sub3_marinelife .card .text .scroll::-webkit-scrollbar {
+   width: 20px;
+}
+#content .sub3_marinelife .card .text .scroll::-webkit-scrollbar-track { 
+   width: 16px;
+   background-color: #eee;
+}
+#content .sub3_marinelife .card .text .scroll::-webkit-scrollbar-thumb { 
+   background-color: #11a691;
+}
+#content .sub3_marinelife .card .text .scroll::-webkit-scrollbar-button {
+   display: none;
+}
+#content .sub3_marinelife .card .text .scroll::-webkit-scrollbar-track, */
+/* #content .sub3_marinelife .card .text .scroll::-webkit-scrollbar-thumb {  */
+   /* 코너에 라운드 효과 */
+   /* background-clip: content-box; */
+   /* border: 4px solid transparent; */
+   /* border-radius: 20px; */
+/* } */
+
+#content .sub3_marinelife .card img{
+   width: 25vw;
+   height: auto;
+   object-fit: cover;
+   margin-left: -130px;
+   margin-right: 50px;
+   border-radius: 24px;
+   box-shadow: 5px 5px 3px rgb(0, 0, 0, 0.2);
+}
+
+#content .sub3_marinelife .card .text .etc_box{
+   margin-top: 20px;
+   display: flex;
+}
+
+#content .sub3_marinelife .card .text .etc_box .sns{
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   padding: 13px 30px 10px 30px;
+   text-align: center;
+}
+
+#content .sub3_marinelife .card .text .etc_box .sns a{
+   color: #333;
+   display: inline;
+   font-size: 1.1rem;
+   margin: 10px 60px 0 0;
+   position: relative;
+}
+
+
+#content .sub3_marinelife .card .text .etc_box .sns a:not(:last-child)::before{
+   content: "";
+   position: absolute;
+   /* width: 10px; */
+   height: 20px;
+   top: 0;
+   left: 50px;
+   border: .5px solid #525252;
+}
+
+#content .sub3_marinelife .card .text .etc_box .sns a:nth-of-type(3){
+   margin-right: 0;
+}
+
+#content .sub3_marinelife .card .text .etc_box .btn{
+   margin-left:auto;
+   padding: 10px 26px;
+   background: #fff;
+   border: 2px solid #111827;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   position: relative;
+   transition: all .3s;
+   z-index: 1;
+   /* margin-top: 20px; */
+}
+
+#content .sub3_marinelife .card .text .etc_box .btn a{
+   color: #111827;
+}
+#content .sub3_marinelife .card .text .etc_box .btn:hover{
+   background: #111827;
+}
+#content .sub3_marinelife .card .text .etc_box .btn:hover a{
+   color: #f9fafb;
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+   #content .sub3_marinelife .card{
+      padding: 50px;
+      align-items: normal;
+      & img{
+         width: 36%;
+         margin-left: 0px;
+         margin-right: 5%;
+      }
+      & .text{
+         width: 51%;
+      }
+   }
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+   #content h3 {font-size: 2rem;}
+   #content .sub3_marinelife .card{
+      flex-direction: column;
+      & img{
+         width: 100%;
+         margin-bottom: 30px;
+      }
+      & .text{
+         width: 100%;
+      }
+   }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+   #content .sub3_marinelife .card{
+   & .p1{
+      font-size: 1rem;
+      margin-bottom: 40px;
+   }
+
+   & .p2{
+      display: none;
+   }
+}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+#content{
+   padding-bottom: 300px;
+   & h3{
+      font-size: 1.5rem;
+      padding: 0;
+   }
+}
+#content .sub3_marinelife .card{
+   margin: 40px auto;
+      
+
+      & h4{
+         font-size: 1.15rem;
+      }
+      & h5{
+         font-size: 1.35rem;
+      }
+
+      & .text .etc_box{
+         display: block;
+         text-align: center;
+      }
+
+      & .text .etc_box .btn{
+         width: 100%;
+         margin-top: 10px;
+      }
+   }
+}

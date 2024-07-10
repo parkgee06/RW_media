@@ -1,0 +1,752 @@
+/* Reset CSS  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: "Fugaz One", sans-serif; */
+
+* {margin:0; padding:0; border:0; outline:0; vertical-align:top; -webkit-text-size-adjust:none;}
+html{font-size: 18px;}
+
+body{
+    font-family:'Roboto', sans-serif;
+    color:#333;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+    display:block;
+}
+
+ul, ol, dl{
+    list-style:none;
+}
+
+img, video{
+    border:0;
+    vertical-align:top;
+}
+
+a{
+    display: block;
+    text-decoration:none;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+input, select{
+    vertical-align:middle;
+}
+
+label{
+    cursor:pointer;
+}
+
+.blind,legend,hr,caption{
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:-1000rem;
+}
+
+i,em,address {
+    font-style:normal;
+    font-weight:normal;
+}
+
+p,li,dd{
+    line-height:1.5rem;
+}
+
+.hidden, #skipNav{
+    display: block;
+    position: absolute;
+    left:-1000%;
+    top:0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff;
+}
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.95rem;
+}
+h3{
+    font-size: 1.7rem;
+}
+h4{
+    font-size: 1.65rem;
+    letter-spacing: .12rem;
+}
+h5{
+    font-size: 1.3rem;
+}
+
+/* 상단 배경 처리 */
+
+/* 헤더 공통 영역 */
+#wrap{
+    width:100%;
+    overflow: hidden;
+}
+
+#headerArea{
+    position:fixed;
+    z-index: 30;
+    height: 165px;
+    /* backdrop-filter: blur(15px); */
+    /* background: rgb(27, 67, 99); */
+    left:0;
+    top: 0;
+    width: 100%;
+    transition: .2s ease-out;
+}	
+
+#headerArea	.headerInner{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* #headerArea h1{ */
+    /* float: left; */
+    /* margin-top: 15px; */
+/* } */
+
+#headerArea h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#headerArea h1 a .logo_img{
+    background: url(../images/rw_logo_header.png) no-repeat center;
+    background-size: cover;
+    width: 300px;
+    height: 63px;
+    margin: 46px 0 45px 0;
+    /* border: 1px solid red; */
+}
+
+/* #headerArea h1 a .logo_img::after{
+    border: 1px solid red;
+    content: "";
+    position: absolute;
+    background: url(../images/rw_logo_header.png);
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 47px;
+} */
+
+/* #headerArea h1 a img{
+    width: 220px;
+} */
+
+#headerArea #gnb{
+    margin-top: 25px;
+}
+
+#headerArea #gnb ul{
+    display: flex;
+    text-align: center;
+    justify-content: right;
+}
+
+#headerArea #gnb ul li{
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerArea #gnb ul li:not(:last-child){
+    margin-right: 35px;
+}
+
+#headerArea #gnb ul li img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#headerArea #gnb ul li a{
+    font-family: "Fugaz One", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* 햄버거메뉴 */
+#headerArea .menu_ham {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    height: 50px;
+    border-radius: 5px;
+    z-index:50;
+    display: none;
+}
+
+#headerArea .menu_ham span {
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    position: relative;
+    text-indent: -9999px;
+    display: block;
+    margin: 26px 15px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+#headerArea .menu_ham span::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+#headerArea .menu_ham span::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+/* 메뉴가 열렸을때 */
+#headerArea.mn_open .menu_ham span, #headerArea.mn_open .menu_ham span::before, #headerArea.mn_open .menu_ham span::after {
+    background: #fff;
+}
+
+#headerArea.down .menu_ham span, #headerArea.down .menu_ham span::before, #headerArea.down .menu_ham span::after {
+    background: #333;
+}
+
+#headerArea.mn_open .menu_ham span {
+    background: rgba(0,0,0,0);
+}
+
+#headerArea.mn_open .menu_ham span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#headerArea.mn_open .menu_ham span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* 푸터 공통 영역 */
+#footerArea{
+    position: relative;
+    width: 100%;
+    height:186px;
+    background:#195f89;
+}
+
+#footerArea::before{
+    content: '';
+    width: 100%;
+    height: 600px;
+    display: block;
+    background: url(../images/footer_back.svg) no-repeat center bottom;
+    background-size: 100% auto;
+    position: absolute;
+    left:0;
+    bottom:184px;
+}
+
+#footerArea a{
+    color: #fff;
+}
+
+#footerArea .footerCon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-size: .9rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 55px;
+}
+
+#footerArea .footerCon a .footer_logo{
+    background: url(../images/rw_logo_header.png) no-repeat center;
+    background-size: cover;
+    width: 300px;
+    height: 63px;
+    /* display: flex; */
+    margin-bottom: 10px;
+}
+
+#footerArea .footerCon .footerRight ul{
+    display: flex;
+    gap: 25px;
+}
+
+#footerArea .footerCon .footerRight ul li{
+    position: relative;
+    text-transform: uppercase;
+}
+
+#footerArea .footerCon .footerRight ul li:nth-of-type(1)::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 130px;
+    height: 20px;
+    border: .5px solid #ffffff96;
+}
+
+#footerArea .footerCon .footerRight ul li:nth-of-type(2)::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 85px;
+    height: 20px;
+    border: .5px solid #ffffff96;
+}
+
+#footerArea .footerCon .footerRight ul li:nth-of-type(3)::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 106px;
+    height: 20px;
+    border: .5px solid #ffffff96;
+}
+
+#footerArea .footerCon .footerRight ul li:nth-of-type(4)::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 122px;
+    height: 20px;
+    border: .5px solid #ffffff96;
+}
+
+#footerArea .footerCon p.copy {
+    margin-top: 8px; /* 리스트와 텍스트 사이의 간격 */
+}
+
+#footerArea .footerCon .footerSNS{
+    display: flex;
+    gap: 10px;
+}
+
+#footerArea .footerCon .footerSNS a img{
+    width: 50px;
+}
+
+/* TOP이동 */
+#footerArea .move_top{
+    text-align: center;
+    font-size: .7rem;
+    color: #fff;
+    font-weight: 400;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top:-425px;
+    z-index: 20;
+    transition: all .5s; 
+}
+
+.move_top:hover{
+    color: #EE5E01;
+    font-weight: 600;
+    text-decoration: none;
+    /* background: #ed1b2e; */
+}
+
+.move_top>img{
+    width: 130px;
+    height: 130px;
+    margin-bottom: 15px;
+}
+
+.move_top .scroll_top{
+    display: block;
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	#footerArea{
+        height:187px;
+        & .footerCon{
+            font-size: .8rem;
+            font-weight: 300;
+            & img{
+                width: 250px;
+            }
+            & .footerRight{
+                & ul li:nth-of-type(1)::after{
+                    height: 18px;
+                    left: 120px;
+                }
+                & ul li:nth-of-type(2)::after{
+                    height: 18px;
+                    left: 77px;
+                }
+                & ul li:nth-of-type(3)::after{
+                    height: 18px;
+                    left: 98px;
+                }
+                & ul li:nth-of-type(4)::after{
+                    height: 18px;
+                    left: 111px;
+                }
+            }
+            & .footerSNS a img{
+                width: 35px;
+            }
+        } 
+    }
+	#footerArea::before{
+        content: '';
+        height: 400px;
+    }
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+    #headerArea{
+        & headerInner{
+            width: 96%;
+            margin: 0 2%;
+        }
+        & h1 a .logo_img{
+            background: url(../images/rw_logo-B-01.png) no-repeat center;
+            background-size: cover;
+            width: 80px;
+            height: 102px;
+            margin: 35px 0;
+        }
+        & h3 a p{
+            font-size: .9rem;
+        }
+        & #gnb{
+            margin-top: 10px;
+            flex: 1;
+                & ul{
+                padding-top: 25px;
+                    & li{
+                        margin: 0 2%;
+                        & h3 a img{
+                            width: 63px;
+                        }
+                    }
+                }
+                & ul li:not(:last-child){
+                    margin-right: 10px;
+                }
+        }
+    }
+
+    #footerArea{
+        /* bottom: 203px; */
+        & .footerCon{
+            & a .footer_logo{
+                background: url(../images/rw_logo-B-01.png) no-repeat center;
+                background-size: cover;
+                width: 80px;
+                height: 102px;
+                /* flex-wrap: wrap; */
+                /* justify-content: center; */
+            }
+            & .footerRight{
+                font-size: .8rem;
+                font-weight: 300;
+                
+                & ul li:nth-of-type(1)::after{
+                    height: 18px;
+                    left: 120px;
+                }
+                & ul li:nth-of-type(2)::after{
+                    height: 18px;
+                    left: 77px;
+                }
+                & ul li:nth-of-type(3)::after{
+                    height: 18px;
+                    left: 98px;
+                }
+                & ul li:nth-of-type(4)::after{
+                    height: 18px;
+                    left: 111px;
+                }
+            }
+            & .footerSNS a img{
+                /* width: 35px; */
+                position: relative;
+            }
+        }
+        & .move_top{
+            top: -279px;
+        }
+    }
+	#footerArea::before{
+        content: '';
+        height: 300px;
+        bottom: 170px;
+    }
+}
+
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+    #headerArea{
+        height: auto;
+        & h3{
+            font-size: 1.7rem;
+        }
+        & h1 a .logo_img{
+            background: url(../images/rw_logo_header.png) no-repeat center;
+            background-size: cover;
+            width: 180px;
+            height: 38px;
+        }
+        & .menuOpen{
+            display:block;
+        }
+        & .menu_ham{
+            top: 25px;
+        }
+        & #gnb{
+            float:none;
+            width:100%;
+            background: rgba(27, 67, 99, .85);
+            backdrop-filter: blur(15px); display:none;
+            position:fixed;
+            top:0;
+            left:0;
+            margin-top: 0;
+            transform: scale(1);
+            padding-top: 80px;
+            box-sizing: border-box;
+            & ul{
+                display: block;
+                padding-top: 0;
+                & li{
+                    float:none;
+                    margin:0;
+                    text-align:center;
+                    width: auto;
+                    & h3 a{
+                        display: block;
+                        padding: 15px 0;
+                        font-size:1.1rem;
+                    }
+                    & h3 a img{
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+    #footerArea{
+        height: 266px;
+        /* bottom: 73px; */
+
+        & .footerCon{
+            display: block;
+            padding: 40px 0;
+            & a .footer_logo{
+                background: url(../images/rw_logo_header.png) no-repeat center;
+                background-size: cover;
+                width: 250px;
+                height: 53px;
+                margin: 0 auto 18px auto;
+                /* flex-wrap: wrap; */
+                /* justify-content: center; */
+            }
+            & .footerRight{
+                font-size: .7rem;
+                font-weight: 200;
+                text-align: center;
+                & ul{
+                    justify-content: center;
+                    & li:nth-of-type(1)::after{
+                        height: 18px;
+                        left: 104px;
+                    }
+                    & li:nth-of-type(2)::after{
+                        height: 18px;
+                        left: 68px;
+                    }
+                    & li:nth-of-type(3)::after{
+                        height: 18px;
+                        left: 88px;
+                    }
+                    & li:nth-of-type(4)::after{
+                        height: 18px;
+                        left: 98px;
+                    }
+                }
+            }
+            & .footerSNS{
+                justify-content: center;
+                margin-top: 30px;
+                & a img{
+                    position: relative;
+                    margin: 0 auto;
+                }
+            }
+        }
+        & .move_top{
+            top: -231px;
+            & img{
+                width: 25%;
+                height: 25%;
+            }
+        }
+    }
+	#footerArea::before{
+        content: '';
+        height: 300px;
+        bottom: 230px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+    #footerArea{
+        height: 266px;
+        /* bottom: 73px; */
+
+        & .footerCon{
+            display: block;
+            padding: 40px 0;
+            & a .footer_logo{
+                width: 230px;
+                height: 49px;
+                margin-bottom: 25px;
+            }
+
+        }
+        & .move_top{
+            top: -203px;
+            & img{
+                width: 25%;
+                height: 25%;
+            }
+        }
+    }
+	#footerArea::before{
+        content: '';
+        height: 200px;
+        bottom: 260px;
+    }
+}
+
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:420px) {
+	#wrap {
+        min-width:320px;
+    }
+
+    #headerArea{
+        height: auto;
+        & h3{
+            font-size: 1.7rem;
+        }
+        & h1 a .logo_img{
+            background: url(../images/rw_logo_header.png) no-repeat center;
+            background-size: cover;
+            width: 180px;
+            height: 38px;
+            margin: 25px 0;
+        }
+        & .menuOpen{
+            display:block;
+        }
+        & .menu_ham{
+            top: 18px;
+            right: 10px;
+        }
+        & #gnb{
+            padding-top: 80px;
+            box-sizing: border-box;
+            & ul{
+                display: block;
+                padding-top: 0;
+                & li{
+                    float:none;
+                    margin:0;
+                    text-align:center;
+                    width: auto;
+                    & h3 a{
+                        display: block;
+                        padding: 10px 0;
+                        font-size:1rem;
+                    }
+                    & h3 a img{
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+    #footerArea{
+        height: 346px;
+        & .footerCon{
+            padding: 30px 0;
+            display: block;
+            & .footerRight{
+                & ul{
+                    display: block;
+                    & li:nth-of-type(1)::after, li:nth-of-type(2)::after, li:nth-of-type(3)::after, li:nth-of-type(4)::after, li:nth-of-type(5)::after{
+                        content: "";
+                        border: none;
+                    }
+                }
+            }
+            & a .footer_logo{
+                width: 180px;
+                height: 38px;
+                margin-bottom: 22px;
+            }
+        }
+        & .move_top{
+            top: -183px;
+            & img{
+                width: 25%;
+                height: 25%;
+            }
+            & .scroll_top{
+                font-size: .5rem;
+            }
+        }
+    }
+	#footerArea::before{
+        content: '';
+        height: 200px;
+        bottom: 330px;
+    }
+}

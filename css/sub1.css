@@ -1,0 +1,267 @@
+/* 와이드 pc  */
+.videoBox{
+   width:100%;
+   height:100%;
+   overflow:hidden;
+   position:absolute;
+}
+
+#imgBG{
+	position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+   left:50%;
+   top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+   width:auto;
+   min-width:100%; /*동영상 너비를 꽉차게*/
+   height:auto;
+   min-height:100%; /*동영상 높이를 꽉차게*/
+   transform:translateX(-50%) translateY(-50%);
+   z-index:-100;
+}
+
+.down{
+   text-decoration: none;
+   text-align: center;
+   font-size: .7rem;
+   color: #fff;
+   font-weight: 400;
+   position: absolute;
+   left:50%;
+   transform: translateX(-50%);
+   bottom: 10%;
+   /* animation:ani 1s infinite  alternate; */
+}
+
+.down::after{
+   content: '';
+   display: block;
+   width: 15px;
+   height: 15px;
+   border-radius: 50% ;
+   background: yellow;
+   position:absolute;
+   right:5px; top:21px;
+   transition: all .5s ease-out;
+   z-index: 1;
+}
+
+.down:hover::after{
+   content: '';
+   transform: scale(3);
+   filter:blur(4px);
+}
+
+.down>img{
+   display: block;
+   margin-bottom: 15px;
+   position: relative; z-index: 2;
+}
+
+#wrap .videoBox a:hover{
+   color: #EE5E01;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+#content{
+   /* overflow: hidden; */
+   width: 100%;
+   margin: 0;
+   background:rgba(0,0,0,.6);
+   position: relative;
+   /* margin-top: 1000px; */
+   padding-bottom: 150px;
+}
+
+#content section {
+   width: 100%;
+}
+
+#content .con_margin{
+   margin-bottom: 150px;
+}
+
+#content h2{
+   position: relative;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+   top: -510px;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-size: 3.5rem;
+   letter-spacing: .2rem;
+   /* transform: translateX(-50%); */
+   color: #fff;
+}
+
+#content h2::before{
+   content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 65px;
+    height: 65px;
+    margin-left: 280px;
+    background: url(../images/h3_before.png) no-repeat;
+    background-size: cover;
+}
+
+#content h3{
+   font-size: 5.5vw;
+   color: #fff;
+   margin-bottom: 50px;
+   box-shadow: inset 0 -60px 0 #EE5E01;
+   width: fit-content;
+}
+#content .stories div:nth-of-type(even) h3{float: right;}
+
+#content h4{
+   clear: both;
+   font-size: 1.8rem;
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+#content p{
+   font-size: 1.1rem;
+   color: #fff;
+   margin-bottom: 30px;
+   font-weight: 300;
+}
+
+/* 체험다이빙 */
+#content .stories .ex_diving_con{
+   position: relative;
+}
+
+#content .stories .ex_diving_con>div:nth-of-type(1){
+   position: absolute;
+   right: 3%;
+   bottom: 0;
+   text-align: left;
+   width: 61%;
+}
+
+#content .stories .ex_diving_con .back_img{
+   margin-bottom: 25%;
+   width: 100%;
+   vertical-align: top;
+}
+
+#content .stories .ex_diving_con .png_pic{
+   width: 32%;
+   position: absolute;
+   left: 3%;
+   bottom: 0;
+}
+
+/* 프리다이빙 */
+#content .stories .free_diving_con{
+   position: relative;
+}
+
+#content .stories .free_diving_con>div:nth-of-type(1){
+   position: absolute;
+   left: 3%;
+   bottom: 15%;
+   text-align: right;
+   width: 61%;
+}
+
+#content .stories .free_diving_con .back_img{
+   margin-bottom: 25%;
+   width: 100%;
+   vertical-align: top;
+}
+
+#content .stories .free_diving_con .png_pic{
+   width: 45%;
+   position: absolute;
+   right: 3%;
+   bottom: 0;
+}
+
+/* 스쿠버 */
+#content .stories .scuba_diving_con{
+   position: relative;
+}
+
+#content .stories .scuba_diving_con>div:nth-of-type(1){
+   position: absolute;
+   right: 3%;
+   bottom: 15%;
+   text-align: left;
+   width: 61%;
+}
+
+#content .stories .scuba_diving_con .back_img{
+   margin-bottom: 25%;
+   width: 100%;
+   vertical-align: top;
+}
+
+#content .stories .scuba_diving_con .png_pic{
+   width: 35%;
+   position: absolute;
+   left: 0;
+   bottom: 300px;
+}
+
+/* 펀다이빙 */
+#content .stories .fun_diving_con{
+   position: relative;
+}
+
+#content .stories .fun_diving_con>div:nth-of-type(1){
+   position: absolute;
+   left: 3%;
+   bottom: 15%;
+   text-align: right;
+   width: 61%;
+}
+
+#content .stories .fun_diving_con .back_img{
+   margin-bottom: 25%;
+   width: 100%;
+   vertical-align: top;
+}
+
+#content .stories .fun_diving_con .png_pic{
+   width: 40%;
+   position: absolute;
+   right: 0;
+   bottom: 300px;
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	#content .stories .free_diving_con .png_pic{right:-5%}
+   #content .stories .scuba_diving_con .png_pic{left:0}
+   #content .stories .fun_diving_con .png_pic{right: -2%;}
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+	#wrap #content .stories .con_margin>div {bottom: -15%;}
+   #content{padding-bottom: 350px;}
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+	#content h2{font-size: 2.5rem;}
+   #content h2::before{top:0; margin-left: 220px;}
+   #wrap #content .stories .con_margin div{text-align: center; width: 100%; left:0; right:0}
+   #wrap #content .stories .con_margin img:nth-of-type(2)  {display: none;}
+   #wrap #content .stories .con_margin div h4:nth-of-type(3)  {display: none;}
+   #wrap #content .stories .con_margin div p{margin:0 20px 10px;}
+   #wrap #content .stories .con_margin div p:nth-of-type(3)  {display: none;}
+   #wrap #content .stories .con_margin div h3{position: relative; left: 50%; transform: translateX(-50%);}
+   #content .stories div:nth-of-type(even) h3{float: none;}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	#content h2{font-size: 2rem;}
+   #content h2::before{top:0; margin-left: 170px;}
+   #content h3{font-size: 2.1rem;}
+}

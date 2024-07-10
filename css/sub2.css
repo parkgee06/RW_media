@@ -1,0 +1,305 @@
+#content{
+   padding-bottom: 600px;
+}
+
+#content h2{
+   position: relative;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+   top: -510px;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   font-size: 3.5rem;
+   letter-spacing: .2rem;
+   /* transform: translateX(-50%); */
+   color: #fff;
+}
+
+#content h2::before{
+   content: '';
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   width: 65px;
+   height: 65px;
+   margin-left: 280px;
+   background: url(../images/h3_before.png) no-repeat;
+   background-size: cover;
+}
+
+#content h3{
+   font-size: 3rem;
+   color: #fff;
+   text-align: center;
+   padding: 50px 0;
+}
+
+#content h3 a{color: #fff;}
+
+#content h4{
+   font-size: 2rem;
+   color: #fff;
+   padding: 40px 0;
+   text-align: center;
+}
+
+#content p{
+   font-size: 1.2rem;
+   color: #fff;
+   text-align: justify;
+   word-break: break-all;
+   font-weight: 400;
+   line-height: 1.5rem;
+   padding-top:20px
+}
+
+#content section{
+   overflow: hidden;
+   filter: grayscale(100%);
+   transition: all 1s;
+}
+
+#content section.on{
+   filter: grayscale(0);
+}
+
+/* 해양생물 - 공동 */
+#content section .marine_animals .list_item{
+   display: flex;
+   gap: 15px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+#content .con_all .marine_animals .list_item span{
+   text-transform: capitalize;
+   display: block;
+   padding: 6px 20px;
+   font-size: .9rem;
+   background: rgba(204, 204, 204, .8);
+   /* border: 1px solid #333; */
+   color: #111;
+   text-align: center;
+   border-radius: 50px;
+}
+
+
+/* 본문영역-배경지정 */
+/* 1위 */
+#content .dive_destination_1 {
+   background: url(../images/sub2/site1_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 2위 */
+#content .dive_destination_2 {
+   background: url(../images/sub2/site2_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 3위 */
+#content .dive_destination_3 {
+   background: url(../images/sub2/site3_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 4위 */
+#content .dive_destination_4 {
+   background: url(../images/sub2/site4_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 5위 */
+#content .dive_destination_5 {
+   background: url(../images/sub2/site5_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 6위 */
+#content .dive_destination_6 {
+   background: url(../images/sub2/site6_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 7위 */
+#content .dive_destination_7 {
+   background: url(../images/sub2/site7_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 8위 */
+#content .dive_destination_8 {
+   background: url(../images/sub2/site8_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 9위 */
+#content .dive_destination_9 {
+   background: url(../images/sub2/site9_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+/* 10위 */
+#content .dive_destination_10 {
+   background: url(../images/sub2/site10_back.jpg) center no-repeat;
+   background-size : cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#content section .con_all{
+   padding: 0 50px 100px 50px;
+}
+#content section .con_all .media .img_item{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   gap: 10px;
+   grid-template-areas: 
+   'a b d e'
+   'a b f g'
+   'c c h i'
+   ;
+}
+
+#content section .con_all .media .img_item li:nth-of-type(1){grid-area: a;}
+#content section .con_all .media .img_item li:nth-of-type(2){grid-area: b;}
+#content section .con_all .media .img_item li:nth-of-type(3){grid-area: c;}
+#content section .con_all .media .img_item li:nth-of-type(4){grid-area: d;}
+#content section .con_all .media .img_item li:nth-of-type(5){grid-area: e;}
+#content section .con_all .media .img_item li:nth-of-type(6){grid-area: f;}
+#content section .con_all .media .img_item li:nth-of-type(7){grid-area: g;}
+#content section .con_all .media .img_item li:nth-of-type(8){grid-area: h;}
+#content section .con_all .media .img_item li:nth-of-type(9){grid-area: i;}
+
+#content section .con_all .media .img_item li:nth-of-type(3) .imgPart{height: 100%;}
+#content section .con_all .media .img_item li:nth-of-type(3) .imgPart a{height: 100%;}
+#content section .con_all .media .img_item li img{width: 100%; height: 100%; object-fit: cover; object-position: center;}
+
+#content section .con_all .media .img_item li .imgPart{
+   /* width: 100%; */
+   height: 100%;
+   position: relative;
+}
+#content section .con_all .media .img_item li .imgPart a{
+   width: 100%;
+   height: 100%;
+}
+
+#content section .con_all .media .img_item li .imgPart .playBnt {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 110px;
+   height: 110px;
+   margin: -55px 0 0 -55px;
+   border-radius: 94px;
+   background: rgba(0,0,0,.6); transition:  all .5s;
+}
+
+#content section .con_all .media .img_item li .imgPart:hover .playBnt {
+   background: rgba(255,0,0,.6)
+}
+
+.media .img_item .imgPart .playBnt i {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #fff; font-size: 2rem;
+}
+
+
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+   #content h3 {font-size: 2.5rem;}
+   #content h4 {font-size: 1.7rem;}
+   #content p{font-size: 1.05rem;}
+
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+   #content h3 {font-size: 2rem;}
+   #content h4 {font-size: 1.3rem; padding: 50px 0 20px 0;}
+   #content p{font-size: .95rem;}
+   #content section .marine_animals .list_item{gap: 10px;}
+   #content .con_all .marine_animals .list_item span{font-size: .75rem; padding: 4px 15px;}
+
+
+
+   #content section .con_all .media .img_item{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      grid-template-areas: 
+      'a b d e'
+      'c c f g'
+      ;
+   }
+   #content section .con_all .media .img_item li:nth-of-type(8){display: none;}
+   #content section .con_all .media .img_item li:nth-of-type(9){display: none;}
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+   #content{padding-bottom: 400px;}
+
+   #content h3 {font-size: 1.7rem;padding: 40px 0;}
+   #content h4 {font-size: 1.1rem;}
+   #content p{font-size: .95rem; line-height: 1.1rem; font-weight: 300;}
+
+
+   #content .explain p:nth-of-type(2){display: none;}
+   #content section .con_all .media .img_item{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      grid-template-areas: 
+      'd e'
+      'a b'
+      'c c'
+      ;
+   }
+   #content section .con_all .media .img_item li:nth-of-type(6){display: none;}
+   #content section .con_all .media .img_item li:nth-of-type(7){display: none;}
+}
+   
+
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+   #content h3 {font-size: 1.3rem;padding: 40px 0;}
+   #content h4 {font-size: .95rem;}
+   #content section .con_all .media .img_item{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      grid-template-areas: 
+      'd e'
+      'c c'
+      ;
+   }
+   #content section .con_all .media .img_item li:nth-of-type(1){display: none;}
+   #content section .con_all .media .img_item li:nth-of-type(2){display: none;}
+}
+
+
